@@ -1,0 +1,6 @@
+**/target
+*.code-workspace
+**/*.http
+**/*.session.sql
+/.vscode
+*.env
