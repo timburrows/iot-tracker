@@ -18,3 +18,4 @@ serde_json = { version = "1.0.111" }
 tokio = { version = "1.35.1", features = ["full"] }
 
 entities = { path = "./entities" }
+data = { path = "./data" }
