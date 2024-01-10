@@ -1,21 +1,12 @@
 [package]
 name = "iot_tracker"
 version = "0.1.0"
+authors = ["Tim Burrows <tburrows90@gmail.com>"]
 edition = "2021"
+publish = false
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[workspace]
+members = [".", "app", "data", "entities", "migration"]
 
 [dependencies]
-axum = "0.7.3"
-dotenvy = "0.15.7"
-sea-orm = { version = "0.12.10", features = [
-    "sqlx-postgres",
-    "macros",
-    "runtime-tokio-native-tls",
-] }
-serde = { version = "1.0.195", features = ["derive"] }
-serde_json = { version = "1.0.111" }
-tokio = { version = "1.35.1", features = ["full"] }
-
-entities = { path = "./entities" }
-data = { path = "./data" }
+iot-tracker-app = { path = "app" }
