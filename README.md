@@ -1,16 +1,6 @@
 # Project Overview
 This sample repository is an experimental Rust project that aims to provide an API to track the geolocation of IoT devices across the globe.
 
-The synopsis is quite simple: provide a web API that effficiently processes a large volume of requests that report the geolocation of IoT devices, in 15 minute intervals. The latitude and longitude of device(s) should be recorded in a SQL database, and anomalies should be observed in a data warehouse such as Big Query.
-
-As a Rust novice aspiring to level-up to an intermediate level, my first objective was to research trends in the Rust eco-system to invest my time/effort into learning the right crates and/or tech. As this is as much a learning experience as a project in itself, I will go into some detail into the conclusions I came to throughout my research.
-
- - Axum: A young contender in a rather small competition of web API frameworks for Rust. Built by the developers behind Tokio, the framework delivers a modest but capable interface to underlying technologies such as tower, hyper and tokio itself, and serves as a thin but powerful layer upon these technologies to give developers a higher-level API to build web services upon. Primarily, the reason I chose Axum was that more mature frameworks such as Rocket and others started to show a decrease in interest and momentum in development.
-
-  - SeaORM: Coming from a C# background, I've been spoilt by the simplicity of Entity Framework and LINQ to SQL. Code-first database modelling and context of the database within the application runtime all provided to you on a silver platter. Well I don't know any better, so naturally I reached out for the Rust lang's plug and play ORM. I had dealt with Diesel previously, and through some brief follow up research found concurrency and performance issues which were of concern. Among others, SeaORM seemed like it had gained the most traction. Once I became a little more familiar with the ORM, I did come to appreciate it, but still I'm fairly unsatisfied. SeaORM didn't have support for all Postgres Types such as Point and others provided by Postgres modules like PostGIS. Despite some complaints, SeaORM has flexible migrations and a neat CLI to maagage them. Entity code-gen was great but on the contrary, it would be nice to see an entity-first alternative, where migrations are generated from entities defined by Rust structs.
-
-  - GCP: I don't have much to say except that there's not much to see here. Barely any support for Rust, a small SDK for some basic things like Pub/Sub, Storage but not much more.
-
 ## Usage
 ### Install Rust 
 Below is a one-liner, but for a more detailed explaination see here https://www.rust-lang.org/tools/install
